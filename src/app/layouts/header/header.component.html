@@ -1,0 +1,27 @@
+<nav class="bg-gray-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex items-center">
+        <div class="flex-shrink-0">
+          <h1 class="text-white font-bold text-xl">Logo</h1>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a  class="button text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" routerLink="/">Home</a>
+            <a  class="button text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" routerLink="/about">About</a>
+            <a  class="button text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" routerLink="/services">Services</a>
+            <a  class="button text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" routerLink="/contact">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center">
+        <button (click)="openLoginDialog()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Login
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<app-login-dialog *ngIf="showLoginDialog" (close)="closeLoginDialog()"></app-login-dialog>
+
